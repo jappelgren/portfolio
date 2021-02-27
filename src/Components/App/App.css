@@ -1,0 +1,132 @@
+:root {
+  --main-color: rgb(235, 27, 27);
+  --font-color: rgb(238, 238, 238);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(48, 48, 48);
+  margin: 0 3rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  color: var(--font-color);
+}
+
+.icon-container {
+  position: relative;
+}
+
+.hidden-svg {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  height: 0px;
+  width: 100px;
+  display: flex;
+  align-items: flex-end;
+  transition: 1s ease;
+}
+
+.hidden-svg > a > svg {
+  position: relative;
+  fill: var(--main-color);
+}
+
+svg {
+  fill: var(--font-color);
+  width: 40px;
+  height: 40px;
+  transition: fill 1s ease;
+  margin: 0 0 0 1rem;
+}
+
+.icon-container:hover > .hidden-svg {
+  height: 50px;
+  width: 100px;
+  transition: 1s ease;
+}
+
+.name-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.main-name {
+  /* color: rgb(241, 241, 241); */
+  font-size: 72px;
+  background: rgb(238, 238, 238);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+.second-name-container {
+  position: absolute;
+  bottom: 0;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: var(--main-color);
+  transition: 1s ease;
+}
+
+.name-container:hover > .second-name-container {
+  height: 50px;
+  transition: 1s ease;
+}
+
+.second-name {
+  font-size: 72px;
+  z-index: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.subtitle {
+  display: flex;
+  justify-content: space-between;
+  color: var(--font-color);
+  text-align: justify;
+  width: 642px;
+}
+
+@media all and (max-width: 1200px) {
+  body {
+  }
+}
+
+@media all and (max-width: 1024px) {
+  body {
+  }
+}
+
+@media all and (max-width: 768px) {
+  .main-name {
+    font-size: 40px;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .main-name {
+    font-size: 24px;
+  }
+}
