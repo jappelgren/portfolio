@@ -11,8 +11,14 @@
 }
 
 body {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(31, 22, 22);
   margin: 0 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+  width: 100%;
 }
 
 .header-container {
@@ -64,10 +70,10 @@ svg {
 .name-container {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .main-name {
-  /* color: rgb(241, 241, 241); */
   font-size: 72px;
   background: rgb(238, 238, 238);
   -webkit-background-clip: text;
@@ -84,6 +90,7 @@ svg {
   align-items: flex-end;
   color: var(--main-color);
   transition: 1s ease;
+  cursor: pointer;
 }
 
 .name-container:hover > .second-name-container {
@@ -107,6 +114,78 @@ svg {
   color: var(--font-color);
   text-align: justify;
   width: 642px;
+}
+
+.menu-container {
+  display: flex;
+  height: 80vh;
+  margin: 3rem 0 0 0;
+}
+
+.link-list {
+  display: inline-block;
+}
+
+.link-container {
+  flex-grow: 3;
+}
+
+.project-link {
+  font-size: 36px;
+  width: 100%;
+}
+
+.project-preview-container {
+  flex-grow: 1;
+  position: relative;
+  height: 50rem;
+  width: 50%;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.project-preview-img {
+  position: absolute;
+  width: 100%;
+}
+
+.link-block {
+  display: block;
+}
+
+.in > .project-preview-img {
+  right: 0;
+  transition: right 0.5s ease;
+}
+
+.out > .project-preview-img {
+  right: -100%;
+  transition: right 0.3s ease;
+}
+
+.img-in {
+  opacity: 100%;
+}
+
+.img-out {
+  opacity: 0;
+  animation-name: hidetransition;
+  animation-timing-function: ease;
+  animation-duration: 0.3s;
+}
+
+@keyframes hidetransition {
+  0% {
+    opacity: 100%;
+  }
+
+  99% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 @media all and (max-width: 1200px) {
