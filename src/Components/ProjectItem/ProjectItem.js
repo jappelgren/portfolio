@@ -12,7 +12,7 @@ export default function ProjectItem({ project, setImgUrl, imgUrl }) {
     return (
         <div>
             <Link to={project.link} >
-                <div class="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                <div className="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
                     <h2 className="main-name project-link">{project.name}</h2>
                     <div className="second-name-container">
                         <h2 className="second-name project-link">{project.name}</h2>

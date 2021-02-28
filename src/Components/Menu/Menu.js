@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import ProjectItem from "../ProjectItem/ProjectItem";
 
 export default function Menu() {
@@ -13,27 +13,22 @@ export default function Menu() {
     const [imgUrl, setImgUrl] = useState({ url: '', inOrOut: 'out' });
 
 
-    console.log('imAGE url', imgUrl);
-
     const grubGoblin = new Project('Grub Goblin', '/gg', 'images/gg-login.png', 'grub-goblin-img');
-    const saga = new Project('SAGA', '/saga', 'images/download.png', 'saga-img');
-    const feedback = new Project('Daily Feedback Form', '/dailyfeedback', 'images/download.png', 'feedback-img');
-    const groupProject = new Project('SnowSwap', '/', 'images/download.png', 'group-project-img');
-    const serverSideCalc = new Project('Server Side Calculator', '/calc', 'images/download.png', 'calc-img');
-    const td = new Project('TD', '/td', 'images/download.png', 'td-img');
+    const saga = new Project('SAGA', '/saga', 'images/saga-screen.png', 'saga-img');
+    const gallery = new Project('Photo Gallery', '/gallery', 'images/gallery.png', 'gallery-img');
+    const groupProject = new Project('SnowSwap', '/', 'images/snowswap.jpg', 'group-project-img');
+    const serverSideCalc = new Project('Server Side Calculator', '/calc', 'images/calc.png', 'calc-img');
+    const td = new Project('TD', '/td', 'images/td.png', 'td-img');
 
     const projects = [
         grubGoblin,
         saga,
-        feedback,
-        serverSideCalc,
+        gallery,
         td,
+        serverSideCalc,
         groupProject
+
     ];
-
-    useEffect(() => {
-
-    }, [imgUrl]);
 
 
     return (
@@ -41,7 +36,7 @@ export default function Menu() {
             <div className="link-container">
                 <ul className="link-list">
                     {projects.map((project) => (
-                        <li>
+                        <li key={project.linkClassName}>
                             <ProjectItem project={project} setImgUrl={setImgUrl} />
                         </li>
                     ))}
@@ -49,7 +44,9 @@ export default function Menu() {
             </div>
             <div className={`project-preview-container ${imgUrl.inOrOut}`}>
                 {projects.map((image) => {
-                    return imgUrl.url === image.photo ? <img className={`project-preview-img img-in`} src={image.photo} /> : <img className={`project-preview-img img-out`} src={image.photo} />;
+                    return imgUrl.url === image.photo ?
+                        <img key={image.linkClassName} className={`project-preview-img img-in`} src={image.photo} alt={`${image.name} screen shot`} /> :
+                        <img key={image.linkClassName} className={`project-preview-img img-out`} src={image.photo} alt={`${image.name} screen shot`} />;
                 }
                 )}
                 {/* <img className={`project-preview-img `} src={imgUrl.url} /> */}
