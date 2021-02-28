@@ -25,7 +25,9 @@ export default function About() {
                 <p className="about-text">JavaScript <Pipe /> HTML <Pipe /> JSX <Pipe /> CSS <Pipe />Node.js <Pipe /> Express.js <Pipe /> React <Pipe /> Material-UI <Pipe /> React-Spring <Pipe /> Redux <Pipe /> Redux-Saga <Pipe /> PostgreSQL <Pipe /> jQuery <Pipe /> Git <Pipe /> GitHub <Pipe /> REST APIs <Pipe />  Puppeteer</p>
             </div>
             <div className="justin-photo-container">
-
+                <div className="photo-container">
+                    <img className="photo" src="images/gabeme.png" alt="A very charismatic and highly employable software engineer and his french bulldog, Gabe" />
+                </div>
             </div>
         </section>
     );
