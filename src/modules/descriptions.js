@@ -1,5 +1,11 @@
 export const descriptions = {
-    gg: '',
+    gg: `Grub Goblin is one of two capstone projects made during my time at Prime Digital Academy.  Grub Goblin was made start to finish in two weeks in February 2021.  The app is a weekly meal planning app with an emphasis on nutrition.
+    
+    A user can enter their own recipes into Grub Goblin, or import a recipe from a url.  The import feature was built with Puppeteer and targets a recipe's website's 'ld+json' metatag and extracts all recipe information from it.  After a recipe is entered it is stored in a database and the ingredients are sent to a 3rd party api for nutrition analysis.  The response is stored in the database and the recipe is ready for use.  Editing a recipe will recalculate its nutrition, as long as an ingredient was add, subtracted or edited.  The api will not be accessed if description, title or image are changed.
+    
+    Once a user has recipes they are able to drag and drop the recipes onto the weekly schedule.  All meals have their nutrition information totaled and displayed under the day.  The goal of this project was to create a weekly meal planning app where daily nutrition and weekly nutrition was easily accessed at a glance.
+    
+    Click the YouTube link below to view a demonstration of the app.`,
     saga: `SAGA Movie Database is an app that displays a list of movies. The movies can be clicked on and the user will be taken to a details page, with a description, movie poster, the genres the movie falls into and title. There is an add movie button on the header than can be clicked to add a movie to the database.
     
     For the previous two projects I've used Material-UI to style the page. For this project I decided to rely solely on my vanilla css skills. The movie list page is styled in an overlapping cards carousel. Hover over the cards will reveal more of the card and show the title of the movie layed over the image of the poster. The add movie page selects a random background image from a movie. I am happy with the way the app looks, but I would definitely like to tweak a couple things.`,

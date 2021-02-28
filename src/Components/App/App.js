@@ -1,6 +1,7 @@
 
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import About from '../About/About';
 import Header from '../Header/Header';
 import Menu from '../Menu/Menu';
 import ProjectBlock from '../ProjectBlock/ProjectBlock.js';
@@ -26,10 +27,15 @@ function App() {
                 projectName={project.name}
                 photo={project.photo}
                 githubUrl={project.githubUrl}
+                featuredImg={project.featuredImg}
+                youtube={project.youtube}
               />
             </Route>
           );
         })}
+        <Route exact path="/about">
+          <About />
+        </Route>
       </Router>
     </div>
   );

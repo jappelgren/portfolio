@@ -1,17 +1,19 @@
 import { descriptions } from './descriptions.js';
 
 class Project {
-    constructor(name, link, photo, linkClassName, body, githubUrl) {
+    constructor(name, link, photo, linkClassName, body, githubUrl, featuredImg, youtube) {
         this.name = name;
         this.link = link;
         this.photo = photo;
         this.linkClassName = linkClassName;
         this.body = body;
         this.githubUrl = githubUrl;
+        this.featuredImg = featuredImg;
+        this.youtube = youtube;
     }
 }
 
-const grubGoblin = new Project('Grub Goblin', '/gg', 'images/gg-login.png', 'grub-goblin-img', descriptions.gg, 'https://github.com/jappelgren/grub-goblin');
+const grubGoblin = new Project('Grub Goblin', '/gg', 'images/gg-login.png', 'grub-goblin-img', descriptions.gg, 'https://github.com/jappelgren/grub-goblin', 'images/gg-dashboard.png', 'https://youtu.be/hHvcLQsFrpw');
 const saga = new Project('SAGA', '/saga', 'images/saga-screen.png', 'saga-img', descriptions.saga, 'https://github.com/jappelgren/movie-sagas');
 const gallery = new Project('Photo Gallery', '/gallery', 'images/gallery.png', 'gallery-img', descriptions.gallery, 'https://github.com/jappelgren/react-gallery');
 const groupProject = new Project('SnowSwap', '/', 'images/snowswap.jpg', 'group-project-img', '', '');

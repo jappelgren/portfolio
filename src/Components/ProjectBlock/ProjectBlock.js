@@ -14,7 +14,7 @@ const customStyles = {
     }
 };
 
-export default function ProjectBlock({ body, projectName, photo, githubUrl }) {
+export default function ProjectBlock({ body, projectName, photo, githubUrl, featuredImg, youtube }) {
     const [modalIsOpen, setIsOpen] = useState(false);
 
     function openModal() {
@@ -34,18 +34,36 @@ export default function ProjectBlock({ body, projectName, photo, githubUrl }) {
                     {body}
                 </p>
                 <div className="github-project-link link-list">
-                    <a href={githubUrl} >
-                        <div className="name-container link-block">
-                            <h2 className="main-name project-link">GitHub</h2>
-                            <div className="second-name-container">
-                                <h2 className="second-name project-link">GitHub</h2>
+                    <p className="link-margin">
+                        <a href={githubUrl}>
+                            <div className="name-container link-block">
+                                <h2 className="main-name external-link">GitHub</h2>
+                                <div className="second-name-container">
+                                    <h2 className="second-name external-link">GitHub</h2>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
+                    </p>
+                    {youtube ?
+                        (<p className="link-margin">
+                            <a href={youtube} >
+                                <div className="name-container link-block">
+                                    <h2 className="main-name external-link">YouTube</h2>
+                                    <div className="second-name-container">
+                                        <h2 className="second-name external-link">YouTube</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </p>) : <></>
+                    }
                 </div>
             </div>
             <div className={"project-image-container"}>
-                <img onClick={openModal} src={photo} alt={`screenshot of ${projectName}`} className={`project-img`} />
+                {featuredImg ?
+                    <img onClick={openModal} src={featuredImg} alt={`screenshot of ${projectName}`} className={`project-img`} /> :
+                    <img onClick={openModal} src={photo} alt={`screenshot of ${projectName}`} className={`project-img`} />
+                }
+
             </div>
             <Modal
                 isOpen={modalIsOpen}
@@ -53,7 +71,10 @@ export default function ProjectBlock({ body, projectName, photo, githubUrl }) {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <img src={photo} alt="" className="modal-img" />
+                {featuredImg ?
+                    <img src={featuredImg} alt={`screenshot of ${projectName}`} className={`modal-img`} /> :
+                    <img src={photo} alt={`screenshot of ${projectName}`} className={`modal-img`} />
+                }
             </Modal>
         </section>
     );

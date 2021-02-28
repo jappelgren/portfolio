@@ -235,10 +235,33 @@ svg {
 .github-project-link {
   margin: 2rem 0;
   font-size: 32px;
+  display: flex;
 }
 
-.github-project-link:hover > a {
+.external-link {
+  font-size: 18px;
+}
+
+.link-margin {
+  margin: 0 2rem 0 0;
+}
+
+.css-fan {
   color: var(--main-color);
+}
+
+.about-text {
+  font-size: 18px;
+  color: var(--font-color);
+}
+
+.about-container {
+  display: flex;
+  margin: 8rem 0;
+}
+
+.about-text-container {
+  width: 50vw;
 }
 
 @keyframes fade-in {
@@ -261,13 +284,13 @@ svg {
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 855px) {
   .main-name {
     font-size: 40px;
   }
 }
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 565px) {
   .main-name {
     font-size: 24px;
   }
