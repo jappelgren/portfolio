@@ -70,8 +70,7 @@ export default function Header() {
             </header>
             <div className="subtitle">
                 <h4>Software Engineer</h4>
-                <h4>Leader</h4>
-                <h4>Mostly Goblin</h4>
+          
             </div>
         </div>
     );

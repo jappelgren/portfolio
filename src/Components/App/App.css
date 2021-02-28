@@ -18,7 +18,7 @@ body {
 a {
   text-decoration: none;
   color: var(--font-color);
-  width: 100%;
+  width: 50vw;
 }
 
 .header-container {
@@ -110,9 +110,10 @@ svg {
 
 .subtitle {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   color: var(--font-color);
   text-align: justify;
+  font-size: 18px;
   width: 642px;
 }
 
@@ -120,6 +121,8 @@ svg {
   display: flex;
   height: 80vh;
   margin: 8rem 0 0 0;
+  animation-name: fade-in;
+  animation-duration: 1s;
 }
 
 .link-list {
@@ -185,6 +188,66 @@ svg {
 
   100% {
     opacity: 0;
+  }
+}
+
+.project-container {
+  margin: 5rem 0 0 0;
+  display: flex;
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.blurb-container {
+  width: 50vw;
+  margin: 0 2rem 0 0;
+}
+
+.project-image-container {
+  width: 50vw;
+  position: relative;
+}
+
+.project-title {
+  font-size: 32px;
+  color: var(--font-color);
+  margin: 0 0 2rem 0;
+}
+
+.project-blurb {
+  font-size: 18px;
+  color: var(--font-color);
+  white-space: pre-line;
+}
+
+.project-img {
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal-img {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  width: 80vw;
+}
+
+.github-project-link {
+  margin: 2rem 0;
+  font-size: 32px;
+}
+
+.github-project-link:hover > a {
+  color: var(--main-color);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }
 

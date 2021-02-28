@@ -1,34 +1,21 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import ProjectItem from "../ProjectItem/ProjectItem";
 
 export default function Menu() {
-    class Project {
-        constructor(name, link, photo, linkClassName) {
-            this.name = name;
-            this.link = link;
-            this.photo = photo;
-            this.linkClassName = linkClassName;
-        }
-    }
+
+    const projects = useSelector(state => state.projectReducer);
+    
     const [imgUrl, setImgUrl] = useState({ url: '', inOrOut: 'out' });
 
+    const handleEnter = (url) => {
+        setImgUrl({ url: url, inOrOut: 'in' });
+    };
 
-    const grubGoblin = new Project('Grub Goblin', '/gg', 'images/gg-login.png', 'grub-goblin-img');
-    const saga = new Project('SAGA', '/saga', 'images/saga-screen.png', 'saga-img');
-    const gallery = new Project('Photo Gallery', '/gallery', 'images/gallery.png', 'gallery-img');
-    const groupProject = new Project('SnowSwap', '/', 'images/snowswap.jpg', 'group-project-img');
-    const serverSideCalc = new Project('Server Side Calculator', '/calc', 'images/calc.png', 'calc-img');
-    const td = new Project('TD', '/td', 'images/td.png', 'td-img');
-
-    const projects = [
-        grubGoblin,
-        saga,
-        gallery,
-        td,
-        serverSideCalc,
-        groupProject
-
-    ];
+    const handleLeave = () => {
+        setImgUrl({ url: '', inOrOut: 'out' });
+    };
 
 
     return (
@@ -37,9 +24,23 @@ export default function Menu() {
                 <ul className="link-list">
                     {projects.map((project) => (
                         <li key={project.linkClassName}>
-                            <ProjectItem project={project} setImgUrl={setImgUrl} />
+                            <ProjectItem
+                                handleEnter={handleEnter}
+                                handleLeave={handleLeave}
+                                project={project}
+                                setImgUrl={setImgUrl} />
                         </li>
                     ))}
+                    <li>
+                        <Link to="/about">
+                            <div className="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                                <h2 className="main-name project-link">About</h2>
+                                <div className="second-name-container">
+                                    <h2 className="second-name project-link">About</h2>
+                                </div>
+                            </div>
+                        </Link>
+                    </li>
                 </ul>
             </div>
             <div className={`project-preview-container ${imgUrl.inOrOut}`}>
