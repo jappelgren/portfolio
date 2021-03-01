@@ -205,9 +205,9 @@ svg {
   transition: right 0.3s ease;
 }
 
-/* .img-in {
-  opacity: 100%;
-} */
+.img-in {
+  opacity: 1;
+}
 
 .img-out {
   opacity: 0;
