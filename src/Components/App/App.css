@@ -1,3 +1,27 @@
+@keyframes hidetransition {
+  0% {
+    opacity: 100%;
+  }
+
+  99% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
 :root {
   --main-color: rgb(235, 27, 27);
   --font-color: rgb(238, 238, 238);
@@ -175,20 +199,6 @@ svg {
   animation-duration: 0.3s;
 }
 
-@keyframes hidetransition {
-  0% {
-    opacity: 100%;
-  }
-
-  99% {
-    opacity: 100%;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 .project-container {
   margin: 5rem 0 0 0;
   display: flex;
@@ -281,16 +291,6 @@ svg {
   position: absolute;
   height: 100%;
   border-radius: 50%;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 100%;
-  }
 }
 
 @media all and (max-width: 855px) {
