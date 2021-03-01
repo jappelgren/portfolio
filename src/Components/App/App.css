@@ -1,4 +1,4 @@
-@keyframes hidetransition {
+/* @keyframes hidetransition {
   0% {
     opacity: 100%;
   }
@@ -36,7 +36,7 @@
   100% {
     opacity: 100%;
   }
-}
+} */
 
 :root {
   --main-color: rgb(235, 27, 27);
