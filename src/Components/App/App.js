@@ -8,8 +8,6 @@ import './App.css';
 
 function App() {
   const projectReducer = useSelector(state => state.projectReducer);
-  const gg = projectReducer[0];
-  console.log(gg);
 
   return (
     <div className="App">
