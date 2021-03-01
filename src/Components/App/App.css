@@ -171,6 +171,7 @@ svg {
   /* height: 80vh; */
   padding: 8rem 0 0 0;
   animation-name: fade-in;
+  -webkit-animation: fade-in;
   /* animation-duration: 1s; */
 }
 
@@ -221,6 +222,9 @@ svg {
   animation-name: hidetransition;
   animation-timing-function: ease;
   animation-duration: 0.3s;
+  -webkit-animation: hidetransition;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-duration: 0.3s;
 }
 
 .project-container {
@@ -228,6 +232,8 @@ svg {
   display: flex;
   animation-name: fade-in;
   animation-duration: 1s;
+  -webkit-animation: fade-in;
+  -webkit-animation-duration: 1s;
 }
 
 .blurb-container {
@@ -267,6 +273,8 @@ svg {
 .modal-img {
   animation-name: fade-in;
   animation-duration: 0.5s;
+  -webkit-animation: fade-in;
+  -webkit-animation-duration: 0.5s;
   width: 80vw;
 }
 
