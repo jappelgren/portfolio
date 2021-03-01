@@ -50,7 +50,6 @@ export default function Menu() {
                         <img key={image.linkClassName} className={`project-preview-img img-out`} src={image.photo} alt={`${image.name} screen shot`} />;
                 }
                 )}
-                {/* <img className={`project-preview-img `} src={imgUrl.url} /> */}
             </div>
         </section>
     );
