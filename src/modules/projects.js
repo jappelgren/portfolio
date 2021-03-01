@@ -16,7 +16,7 @@ class Project {
 const grubGoblin = new Project('Grub Goblin', '/gg', 'images/gg-login.png', 'grub-goblin-img', descriptions.gg, 'https://github.com/jappelgren/grub-goblin', 'images/gg-dashboard.png', 'https://youtu.be/hHvcLQsFrpw');
 const saga = new Project('SAGA', '/saga', 'images/saga-screen.png', 'saga-img', descriptions.saga, 'https://github.com/jappelgren/movie-sagas');
 const gallery = new Project('Photo Gallery', '/gallery', 'images/gallery.png', 'gallery-img', descriptions.gallery, 'https://github.com/jappelgren/react-gallery');
-const groupProject = new Project('SnowSwap', '/', 'images/snowswap.jpg', 'group-project-img', '', '');
+const groupProject = new Project('SnowSwap', '/snowswap', 'images/snowswap.jpg', 'group-project-img', '', '');
 const serverSideCalc = new Project('MI-108 Calculator', '/calc', 'images/calc.png', 'calc-img', descriptions.calc, 'https://github.com/jappelgren/jquery-server-side-calculator');
 const td = new Project('TD', '/td', 'images/td.png', 'td-img', descriptions.td, 'https://github.com/jappelgren/weekend-sql-to-do-list');
 

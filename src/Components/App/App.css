@@ -13,6 +13,7 @@
 body {
   background-color: rgb(31, 22, 22);
   margin: 0 3rem;
+  overflow-x: hidden;
 }
 
 a {
@@ -119,10 +120,10 @@ svg {
 
 .menu-container {
   display: flex;
-  height: 80vh;
-  margin: 8rem 0 0 0;
+  /* height: 80vh; */
+  padding: 8rem 0 0 0;
   animation-name: fade-in;
-  animation-duration: 1s;
+  /* animation-duration: 1s; */
 }
 
 .link-list {
@@ -141,10 +142,7 @@ svg {
 .project-preview-container {
   flex-grow: 1;
   position: relative;
-  height: 50rem;
   width: 50%;
-  overflow: hidden;
-  transition: height 1s ease;
 }
 
 .project-preview-img {
@@ -299,10 +297,71 @@ svg {
   .main-name {
     font-size: 40px;
   }
+  .second-name {
+    font-size: 40px;
+  }
+  .name-container:hover > .second-name-container {
+    height: 30px;
+    transition: 1s ease;
+  }
+  .subtitle {
+    width: 355px;
+  }
+
+  .photo-container {
+    width: 20vw;
+    height: 20vh;
+    justify-content: flex-start;
+    margin: 0 0 0 2rem;
+  }
+
+  .external-link {
+    font-size: 18px;
+  }
 }
 
 @media all and (max-width: 565px) {
   .main-name {
-    font-size: 24px;
+    font-size: 22px;
+  }
+
+  .second-name {
+    font-size: 22px;
+  }
+
+  .name-container:hover > .second-name-container {
+    height: 15px;
+    transition: 1s ease;
+  }
+
+  .project-link {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    width: 196px;
+    font-size: 10px;
+  }
+
+  .photo-container {
+    width: 0;
+    margin: 0 0 2rem 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+
+  .about-text-container {
+    width: 100%;
+  }
+
+  .about-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
   }
 }

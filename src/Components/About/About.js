@@ -8,7 +8,7 @@ export default function About() {
             <div className="about-text-container">
                 <p className="about-text">
                     Hi, my name is Justin Appelgren.  I am a full stack software engineer with a passion for building memorable front end user
-                        experiences <LoveCss />. I have over 15 years of work experience leading teams, from small groups to entire organizations.
+                        experiences <LoveCss />. I have over 15 years of experience leading teams, from small groups to entire organizations.
                         I love finding elegant solutions to difficult problems.
                 </p>
 

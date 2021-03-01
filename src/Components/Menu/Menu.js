@@ -6,7 +6,7 @@ import ProjectItem from "../ProjectItem/ProjectItem";
 export default function Menu() {
 
     const projects = useSelector(state => state.projectReducer);
-    
+
     const [imgUrl, setImgUrl] = useState({ url: '', inOrOut: 'out' });
 
     const handleEnter = (url) => {
@@ -40,6 +40,18 @@ export default function Menu() {
                                 </div>
                             </div>
                         </Link>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="mailto:justinappelgren@gmail.com">
+                                <div className="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                                    <h2 className="main-name project-link">justinappelgren@gmail.com</h2>
+                                    <div className="second-name-container">
+                                        <h2 className="second-name project-link">justinappelgren@gmail.com</h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </p>
                     </li>
                 </ul>
             </div>

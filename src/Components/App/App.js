@@ -1,4 +1,3 @@
-
 import { useSelector } from 'react-redux';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import About from '../About/About';
