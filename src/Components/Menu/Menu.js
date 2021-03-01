@@ -41,18 +41,6 @@ export default function Menu() {
                             </div>
                         </Link>
                     </li>
-                    <li>
-                        <p>
-                            <a href="mailto:justinappelgren@gmail.com">
-                                <div className="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-                                    <h2 className="main-name project-link">justinappelgren@gmail.com</h2>
-                                    <div className="second-name-container">
-                                        <h2 className="second-name project-link">justinappelgren@gmail.com</h2>
-                                    </div>
-                                </div>
-                            </a>
-                        </p>
-                    </li>
                 </ul>
             </div>
             <div className={`project-preview-container ${imgUrl.inOrOut}`}>

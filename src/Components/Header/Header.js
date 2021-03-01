@@ -66,6 +66,24 @@ export default function Header() {
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <div className="icon-container">
+                            <a href="mailto:justinappelgren@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="24px" y="24px" viewBox="0 0 24 24">
+                                    <path d="M19,0H4.8c-2.8,0-5,2.2-5,5v14c0,2.8,2.3,5,5,5H19c2.8,0,5-2.2,5-5V5C24,2.2,21.7,0,19,0z M19,7l-7,5.7L5,7H19z M19,17H5
+	                                V8.5l7,5.7l7-5.7V17z"/>
+                                </svg>
+                            </a>
+                            <div className="hidden-svg">
+                                <a href="mailto:justinappelgren@gmail.com">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="24px" y="24px" viewBox="0 0 24 24">
+                                        <path d="M19,0H4.8c-2.8,0-5,2.2-5,5v14c0,2.8,2.3,5,5,5H19c2.8,0,5-2.2,5-5V5C24,2.2,21.7,0,19,0z M19,7l-7,5.7L5,7H19z M19,17H5
+	                                V8.5l7,5.7l7-5.7V17z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </header>
             <div className="subtitle">
