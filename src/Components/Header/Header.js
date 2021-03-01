@@ -10,7 +10,7 @@ export default function Header() {
         <div>
             <header className="header-container">
                 <div onClick={handleClick} className="name-container">
-                    <h1 className="main-name">Justin Appelgren</h1>
+                    <h1 className="main-name">Justin AAppelgren</h1>
                     <div className="second-name-container">
                         <h1 className="second-name">Justin Appelgren</h1>
                     </div>
