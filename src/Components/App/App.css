@@ -1,39 +1,39 @@
 @keyframes hidetransition {
-  0% {
+  from {
     opacity: 100%;
   }
 
-  100% {
+  to {
     opacity: 0;
   }
 }
 
 @keyframes fade-in {
-  0% {
+  from {
     opacity: 0;
   }
 
-  100% {
+  to {
     opacity: 100%;
   }
 }
 
 @-webkit-keyframes hidetransition {
-  0% {
+  from {
     opacity: 100%;
   }
 
-  100% {
+  to {
     opacity: 0;
   }
 }
 
 @-webkit-keyframes fade-in {
-  0% {
+  from {
     opacity: 0;
   }
 
-  100% {
+  to {
     opacity: 100%;
   }
 }
