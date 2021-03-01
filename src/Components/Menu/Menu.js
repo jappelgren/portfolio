@@ -7,14 +7,14 @@ export default function Menu() {
 
     const projects = useSelector(state => state.projectReducer);
 
-    const [imgUrl, setImgUrl] = useState({ url: '', inOrOut: 'out' });
+    const [imgUrl, setImgUrl] = useState({ url: 'images/gg-login.png', inOrOut: 'out' });
 
     const handleEnter = (url) => {
         setImgUrl({ url: url, inOrOut: 'in' });
     };
 
-    const handleLeave = () => {
-        setImgUrl({ url: '', inOrOut: 'out' });
+    const handleLeave = (url) => {
+        setImgUrl({ url: url, inOrOut: 'out' });
     };
 
 
@@ -33,7 +33,7 @@ export default function Menu() {
                     ))}
                     <li>
                         <Link to="/about">
-                            <div className="name-container link-block" onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+                            <div className="name-container link-block">
                                 <h2 className="main-name project-link">About</h2>
                                 <div className="second-name-container">
                                     <h2 className="second-name project-link">About</h2>
@@ -44,10 +44,9 @@ export default function Menu() {
                 </ul>
             </div>
             <div className={`project-preview-container ${imgUrl.inOrOut}`}>
+                <img className={`project-preview-img img-in`} src={imgUrl.url} alt={`screen shot`} />
                 {projects.map((image) => {
-                    return imgUrl.url === image.photo ?
-                        <img key={image.linkClassName} className={`project-preview-img img-in`} src={image.photo} alt={`${image.name} screen shot`} /> :
-                        <img key={image.linkClassName} className={`project-preview-img img-out`} src={image.photo} alt={`${image.name} screen shot`} />;
+                    return <img key={image.linkClassName} className={`project-preview-img img-out`} src={image.photo} alt={`${image.name} screen shot`} />;
                 }
                 )}
             </div>

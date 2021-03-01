@@ -201,8 +201,8 @@ svg {
 }
 
 .out > .project-preview-img {
-  transform: translateX(100%);
-  transition: transform 0.5s ease;
+  transform: translateX(200%);
+  transition: transform 1s ease;
 }
 
 .img-in {
@@ -212,14 +212,14 @@ svg {
 
 .img-out {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  /* transition: opacity 0.5s ease;
   animation-name: hidetransition;
   animation-timing-function: ease;
   animation-duration: 0.3s;
   -webkit-animation: hidetransition;
   -webkit-animation-timing-function: ease;
   -webkit-animation-duration: 0.3s;
-  /* transform: translateX(-100%); */
+  transform: translateX(-100%); */
 }
 
 .project-container {
