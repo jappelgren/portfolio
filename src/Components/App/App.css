@@ -3,10 +3,6 @@
     opacity: 100%;
   }
 
-  99% {
-    opacity: 100%;
-  }
-
   100% {
     opacity: 0;
   }
@@ -24,10 +20,6 @@
 
 @-webkit-keyframes hidetransition {
   0% {
-    opacity: 100%;
-  }
-
-  99% {
     opacity: 100%;
   }
 
