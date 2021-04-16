@@ -26,7 +26,7 @@ export default function About() {
             </div>
             <div className="justin-photo-container">
                 <div className="photo-container">
-                    <img className="photo" src="images/gabeme.png" alt="A very charismatic and highly employable software engineer and his french bulldog, Gabe" />
+                    <img className="photo" src="https://j-portfolio-a.s3.us-east-2.amazonaws.com/gabeme.png" alt="A very charismatic and highly employable software engineer and his french bulldog, Gabe" />
                 </div>
             </div>
         </section>
